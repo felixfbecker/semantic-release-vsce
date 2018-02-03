@@ -13,7 +13,6 @@ Semantic release plugin for Visual Stuio Code extensions
 #### Add config to package.json
 
 Use `semantic-release-vsce` as part of `verifyConditions` and `publish`.
-For `getLastRelease` you should use `@semantic-release/git` (instead of the default npm implementation).
 
 ```json
 {
@@ -22,7 +21,6 @@ For `getLastRelease` you should use `@semantic-release/git` (instead of the defa
   },
   "release": {
     "verifyConditions": ["semantic-release-vsce", "@semantic-release/github"],
-    "getLastRelease": "@semantic-release/git",
     "publish": [
       {
         "path": "semantic-release-vsce",
@@ -35,12 +33,13 @@ For `getLastRelease` you should use `@semantic-release/git` (instead of the defa
     ]
   },
   "devDependencies": {
-    "@semantic-release/git": "^2.0.0",
-    "semantic-release": "^12.0.0",
+    "semantic-release": "^13.0.0",
     "semantic-release-vsce": "^2.0.0",
   }
 }
 ```
+
+This example is for `semantic-release` v13. [Example when using `semantic-release` v12](https://github.com/raix/semantic-release-vsce/blob/aa932f9e5f5fb00006b6a9619068724dc7390f46/README.md#add-config-to-packagejson)
 
 If `packageVsix` is set, will also generate a .vsix file at the set file path after publishing.
 It is recommended to upload this to your GitHub release page so your users can easily rollback to an earlier version if a version ever introduces a bad bug. 

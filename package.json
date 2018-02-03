@@ -31,10 +31,10 @@
     "vsce": "^1.33.2"
   },
   "devDependencies": {
-    "semantic-release": "^12.2.2"
+    "semantic-release": "^13.1.3"
   },
   "peerDependencies": {
-    "semantic-release": "^12.0.0"
+    "semantic-release": "^12.0.0 || ^13.0.0"
   },
   "release": {
     "verifyConditions": "@semantic-release/github"
